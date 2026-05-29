@@ -6,7 +6,7 @@ services:
     ports:
       - "8000:8000"
     env_file:
-      - ./backend/.env
+      - ./backend/.env.example
     environment:
       - PYTHONUNBUFFERED=1
 
@@ -17,7 +17,7 @@ services:
     ports:
       - "3000:3000"
     env_file:
-      - ./frontend/.env.local
+      - ./frontend/.env.example
     depends_on:
       - backend
 
